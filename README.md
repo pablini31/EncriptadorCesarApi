@@ -1,12 +1,43 @@
 # API de Cifrado César
 
-Esta es una API simple que implementa el cifrado César, permitiendo encriptar y desencriptar mensajes.
+API REST que implementa el cifrado César, permitiendo encriptar y desencriptar mensajes.
 
 ## Características
 
 - Endpoint para encriptar mensajes
 - Endpoint para desencriptar mensajes
-- Documentación con Swagger UI
+- Soporte para letras mayúsculas y minúsculas
+- Preserva caracteres especiales y espacios
+- Documentación con Swagger
+
+## Endpoints
+
+### Encriptar
+- **URL**: `/encriptar`
+- **Método**: POST
+- **Body**:
+```json
+{
+    "texto": "Mensaje a encriptar",
+    "desplazamiento": 3
+}
+```
+
+### Desencriptar
+- **URL**: `/desencriptar`
+- **Método**: POST
+- **Body**:
+```json
+{
+    "texto": "Mensaje encriptado",
+    "desplazamiento": 3
+}
+```
+
+## Tecnologías
+- .NET 7
+- ASP.NET Core
+- Swagger/OpenAPI
 
 ## Requisitos
 
